@@ -1,6 +1,0 @@
-@SmartCamp.CoreApp.WebApi_HostAddress = http://localhost:5093
-
-GET {{SmartCamp.CoreApp.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
