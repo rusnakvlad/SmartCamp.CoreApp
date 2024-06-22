@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using SmartCamp.Core.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Database
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 
