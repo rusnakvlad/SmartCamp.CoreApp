@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace SmartCamp.Core.Domain;
+namespace SmartCamp.Core.Domain.Entities;
 
 public class User : IdentityUser
 {
