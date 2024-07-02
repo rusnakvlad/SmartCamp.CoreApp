@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using SmartCamp.CoreApp.Service.DTOs;
+using SmartCamp.Core.Domain.DTOs.User;
 using SmartCamp.CoreApp.Service.Interfaces;
 
 namespace SmartCamp.CoreApp.WebApi.Controllers;

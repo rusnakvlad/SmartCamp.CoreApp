@@ -1,4 +1,4 @@
-namespace SmartCamp.CoreApp.Service.DTOs;
+namespace SmartCamp.Core.Domain.DTOs.User;
 
 public class CreateUserDto
 {

@@ -1,4 +1,4 @@
-using SmartCamp.CoreApp.Service.DTOs;
+using SmartCamp.Core.Domain.DTOs.User;
 
 namespace SmartCamp.CoreApp.Service.Interfaces;
 

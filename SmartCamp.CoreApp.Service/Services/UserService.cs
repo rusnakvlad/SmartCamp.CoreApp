@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using SmartCamp.Core.Domain.DTOs.User;
 using SmartCamp.Core.Domain.Entities;
-using SmartCamp.CoreApp.Service.DTOs;
 using SmartCamp.CoreApp.Service.Interfaces;
 
 namespace SmartCamp.CoreApp.Service.Services;
