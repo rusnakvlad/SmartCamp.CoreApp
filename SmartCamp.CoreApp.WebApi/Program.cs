@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using SmartCamp.Core.Domain.Entities;
 using SmartCamp.Core.Infrastructure;
 using SmartCamp.CoreApp.Service.Interfaces;
 using SmartCamp.CoreApp.Service.Services;
+using SmartCamp.CoreApp.WebApi;
 using SmartCamp.CoreApp.WebApi.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +30,9 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 
 // Add services to the container.
 builder.Services.AddScoped<IUserService, UserService>();
+
+// Automapper
+builder.Services.AddAutoMapper(typeof(AutoMapping));
 
 // Add Authentication
 builder.Services.AddAuthentication(options =>

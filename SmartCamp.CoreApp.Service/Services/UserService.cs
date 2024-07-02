@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SmartCamp.Core.Domain.DTOs.User;
@@ -9,10 +10,12 @@ namespace SmartCamp.CoreApp.Service.Services;
 public class UserService : IUserService
 {
     private readonly UserManager<User> _userManager;
-
-    public UserService(UserManager<User> userManager)
+    private readonly IMapper _mapper;
+    
+    public UserService(UserManager<User> userManager, IMapper mapper)
     {
         _userManager = userManager;
+        _mapper = mapper;
     }
 
 
@@ -43,13 +46,6 @@ public class UserService : IUserService
         var users = await _userManager.Users.AsNoTracking()
             .ToListAsync();
 
-        return users.Select(x => new UserDto()
-        {
-            Id = x.Id,
-            FirstName = x.FirstName,
-            LastName = x.LastName,
-            Email = x.Email,
-            Username = x.UserName
-        });
+        return users.Select(x => _mapper.Map<UserDto>(x));
     }
 }
